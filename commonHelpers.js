@@ -5,8 +5,7 @@ import"./assets/styles-6210291f.js";import{S as i}from"./assets/vendor-870f0eb5.
 			class="gallery-image" 
 			src="${o}" 
 			alt="${a}"
-      
-			/>
+/>
 	</a>
 </li>`).join(`
 `);e.insertAdjacentHTML("beforeend",n);new i(".gallery a",{captionData:"alt",captionDelay:250});
