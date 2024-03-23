@@ -79,8 +79,7 @@ const image = images
 			class="gallery-image" 
 			src="${preview}" 
 			alt="${description}"
-      
-			/>
+/>
 	</a>
 </li>`;
   })
