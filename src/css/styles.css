@@ -1,8 +1,17 @@
-/**
-  |============================
-  | include css partials with
-  | default @import url()
-  |============================
-*/
-
 @import url('./reset.css');
+body {
+  background-color: bisque;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  max-width: 1128px;
+  padding-top: 32px;
+  margin: auto;
+}
+.gallery-image {
+  width: 360px;
+  height: 200px;
+}
