@@ -26,7 +26,7 @@ writingFormElements();
 
 function sendingMessage(event) {
      event.preventDefault(); 
-    if (form.elements.email.value.trim() && form.elements.message.value.trim()) {
+    if (form.elements.email.value.trim() !== `` && !form.elements.message.value.trim() !== ``) {
       console.log(localStorage.getItem(storageKey));
         event.currentTarget.reset();
         localStorage.removeItem(storageKey);
