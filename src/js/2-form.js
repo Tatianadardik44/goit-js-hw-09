@@ -5,7 +5,7 @@ form.addEventListener("input", addArchive);
 form.addEventListener("submit", sendingMessage);
 
 function addArchive(event) {
-    event.preventDefault(); 
+    
     const valuesObject = {
         email: form.email.value.trim(),
         message: form.message.value.trim()
@@ -26,8 +26,9 @@ writingFormElements();
 
 function sendingMessage(event) {
      event.preventDefault(); 
-    if (form.elements.email.value.trim() !== `` && !form.elements.message.value.trim() !== ``) {
-      console.log(localStorage.getItem(storageKey));
+    if (form.elements.email.value.trim() !== `` && form.elements.message.value.trim() !== ``) {
+     const formData = JSON.parse(localStorage.getItem(storageKey));
+      console.log(formData);
         event.currentTarget.reset();
         localStorage.removeItem(storageKey);
     };
