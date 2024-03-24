@@ -31,8 +31,7 @@ function sendingMessage(event) {
         event.currentTarget.reset();
         localStorage.removeItem(storageKey);
     };
-    
-}; 
+    }; 
 
 
 
