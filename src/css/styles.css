@@ -15,3 +15,8 @@ body {
   width: 360px;
   height: 200px;
 }
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+}
