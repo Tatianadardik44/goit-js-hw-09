@@ -26,7 +26,8 @@ writingFormElements();
 
 function sendingMessage(event) {
      event.preventDefault(); 
-    if (form.elements.email.value.trim() !== `` && form.elements.message.value.trim() !== ``) {
+    if (form.elements.email.value.trim() !== `` && ` ` && form.elements.message.value.trim() !== `` && ` `) {
+        
      const formData = JSON.parse(localStorage.getItem(storageKey));
       console.log(formData);
         event.currentTarget.reset();
