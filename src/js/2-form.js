@@ -14,11 +14,11 @@ function addArchive(event) {
 
 };
 function writingFormElements() {
-    const keit = localStorage.getItem(storageKey);
-    const hgjgf = JSON.parse(keit);
-    if (hgjgf) {
-        form.elements.email.value = hgjgf.email;
-        form.elements.message.value = hgjgf.message;
+    const savedData = localStorage.getItem(storageKey);
+    const parsedData = JSON.parse(savedData);
+    if (parsedData) {
+        form.elements.email.value = parsedData.email;
+        form.elements.message.value = parsedData.message;
     }
    
 };
@@ -26,7 +26,7 @@ writingFormElements();
 
 function sendingMessage(event) {
      event.preventDefault(); 
-    if (form.elements.email.value && form.elements.message.value) {
+    if (form.elements.email.value.trim() && form.elements.message.value.trim()) {
       console.log(localStorage.getItem(storageKey));
         event.currentTarget.reset();
         localStorage.removeItem(storageKey);
